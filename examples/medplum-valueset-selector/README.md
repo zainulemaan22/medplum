@@ -35,7 +35,7 @@ Then, run the app
 npm run dev
 ```
 
-This app should run on `http://localhost:3000/`
+This app should run on `http://13.40.11.171:3000/`
 
 ## Features
 

@@ -51,7 +51,7 @@ For general guidance on using [Artillery](https://www.artillery.io/) to generate
 For a quick test of a single HTTP endpoint, we can use Artillery's `quick` mode:
 
 ```bash
-artillery quick --count 20 --num 100 http://localhost:8103/healthcheck
+artillery quick --count 20 --num 100 http://13.40.11.171:8103/healthcheck
 ```
 
 Sample output:

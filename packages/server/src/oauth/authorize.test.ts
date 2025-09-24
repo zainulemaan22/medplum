@@ -220,7 +220,7 @@ describe('OAuth Authorize', () => {
       scope: 'openid',
       code_challenge: 'xyz',
       code_challenge_method: 'plain',
-      aud: 'http://localhost:8103', // Intentionally omit the trailing slash, should still work
+      aud: 'http://13.40.11.171:8103', // Intentionally omit the trailing slash, should still work
     });
     const res = await request(app).get('/oauth2/authorize?' + params.toString());
     expect(res.status).toBe(302);
@@ -236,7 +236,7 @@ describe('OAuth Authorize', () => {
       scope: 'openid',
       code_challenge: 'xyz',
       code_challenge_method: 'plain',
-      aud: 'http://localhost:8103/fhir/R4',
+      aud: 'http://13.40.11.171:8103/fhir/R4',
     });
     const res = await request(app).get('/oauth2/authorize?' + params.toString());
     expect(res.status).toBe(302);

@@ -39,7 +39,7 @@ Then, run the app
 npm run dev
 ```
 
-This app will run on `http://localhost:3000` and connect to a hosted Medplum project at `https://api.medplum.com/` by default. The server url can be changed in [main.tsx](./src/main.tsx)
+This app will run on `http://13.40.11.171:3000` and connect to a hosted Medplum project at `https://api.medplum.com/` by default. The server url can be changed in [main.tsx](./src/main.tsx)
 
 ## Background
 

@@ -1416,7 +1416,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer(client2.id)
       .setSubject(client2.id)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();
@@ -1442,7 +1442,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer(fakeClientId)
       .setSubject(fakeClientId)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();
@@ -1468,7 +1468,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer(client.id)
       .setSubject(client.id)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();
@@ -1536,7 +1536,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer('invalid-issuer')
       .setSubject(client2.id)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();
@@ -1570,7 +1570,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer(client2.id)
       .setSubject(client2.id)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();
@@ -1604,7 +1604,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer(client2.id)
       .setSubject(client2.id)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();
@@ -1635,7 +1635,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer(client2.id)
       .setSubject(client2.id)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();
@@ -1666,7 +1666,7 @@ describe('OAuth2 Token', () => {
       .setIssuedAt()
       .setIssuer(client2.id)
       .setSubject(client2.id)
-      .setAudience('http://localhost:8103/oauth2/token')
+      .setAudience('http://13.40.11.171:8103/oauth2/token')
       .setExpirationTime('2h')
       .sign(keyPair.privateKey);
     expect(jwt).toBeDefined();

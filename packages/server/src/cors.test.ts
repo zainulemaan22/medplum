@@ -31,14 +31,14 @@ describe('CORS', () => {
 
   test('Allow appBaseUrl', () => {
     const req = {
-      header: () => 'http://localhost:3000',
+      header: () => 'http://13.40.11.171:3000',
       path: '/fhir/R4/Patient',
     } as unknown as Request;
     const callback = jest.fn();
     corsOptions(req, callback);
     expect(callback).toHaveBeenCalledWith(
       null,
-      expect.objectContaining({ credentials: true, origin: 'http://localhost:3000' })
+      expect.objectContaining({ credentials: true, origin: 'http://13.40.11.171:3000' })
     );
   });
 

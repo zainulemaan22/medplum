@@ -137,7 +137,7 @@ cd packages/server
 npm run dev
 ```
 
-You should now be able to access the Medplum server at [http://localhost:8103/healthcheck](http://localhost:8103/healthcheck).
+You should now be able to access the Medplum server at [http://13.40.11.171:8103/healthcheck](http://13.40.11.171:8103/healthcheck).
 
 ## Start Medplum app
 
@@ -159,7 +159,7 @@ cd packages/app
 npm run dev
 ```
 
-You should now be able to access the Medplum app at [http://localhost:3000](http://localhost:3000).
+You should now be able to access the Medplum app at [http://13.40.11.171:3000](http://13.40.11.171:3000).
 
 ## Optional: Nginx
 
@@ -324,7 +324,7 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
     location / {
-        proxy_pass http://localhost:8103;
+        proxy_pass http://13.40.11.171:8103;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';

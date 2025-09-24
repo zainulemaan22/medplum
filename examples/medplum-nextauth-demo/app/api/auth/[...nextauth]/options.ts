@@ -17,7 +17,7 @@ export const options: NextAuthOptions = {
         url: 'https://api.medplum.com/oauth2/authorize',
         params: {
           scope: 'openid profile email',
-          redirect_uri: 'http://localhost:3000/api/auth/callback/medplum',
+          redirect_uri: 'http://13.40.11.171:3000/api/auth/callback/medplum',
           response_type: 'code',
           nonce: '',
         },

@@ -21,7 +21,7 @@ spec:
             - containerPort: 3000
           env:
             - name: MEDPLUM_BASE_URL
-              value: "http://localhost:8103/"
+              value: "http://13.40.11.171:8103/"
           readinessProbe:
             httpGet:
               path: /

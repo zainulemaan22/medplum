@@ -3,7 +3,7 @@ import path from 'node:path';
 
 test.describe('Medplum App Smoke Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000');
+    await page.goto('http://13.40.11.171:3000');
   });
 
   // TODO: Work around recaptcha
@@ -18,7 +18,7 @@ test.describe('Medplum App Smoke Tests', () => {
 
     // Navigate to sign up form
     await page.getByRole('button', { name: 'Register' }).click();
-    await expect(page).toHaveURL('http://localhost:3000/register');
+    await expect(page).toHaveURL('http://13.40.11.171:3000/register');
 
     // Fill out sign up form
     await page.getByPlaceholder('First name').fill('Test');
@@ -28,7 +28,7 @@ test.describe('Medplum App Smoke Tests', () => {
     await page.getByLabel('Remember me').check();
     await page.getByRole('button', { name: 'Create account' }).click();
 
-    await expect(page).toHaveURL('http://localhost:3000/register');
+    await expect(page).toHaveURL('http://13.40.11.171:3000/register');
     await page.getByPlaceholder('My Project').fill('Test Project');
     await page.getByRole('button', { name: 'Create project' }).click();
   });
@@ -65,14 +65,14 @@ test.describe('Medplum App Smoke Tests', () => {
   test('Search for patient via permalink', async ({ page }) => {
     await signIn(page, 'admin@example.com', 'medplum_admin');
 
-    await page.goto('http://localhost:3000/Patient?name=Frodo&_sort=-_lastUpdated');
+    await page.goto('http://13.40.11.171:3000/Patient?name=Frodo&_sort=-_lastUpdated');
     await expect(page.getByTestId('search-control-row').first().locator('div')).toContainText('Frodo Baggins');
   });
 
   test('Upload patient profile photo', async ({ page }) => {
     await signIn(page, 'admin@example.com', 'medplum_admin');
 
-    await page.goto('http://localhost:3000/Patient?name=Frodo&_sort=-_lastUpdated');
+    await page.goto('http://13.40.11.171:3000/Patient?name=Frodo&_sort=-_lastUpdated');
     await expect(page.getByTestId('search-control-row').first().locator('div')).toContainText('Frodo Baggins');
 
     // Click on patient

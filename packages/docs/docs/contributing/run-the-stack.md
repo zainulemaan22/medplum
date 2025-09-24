@@ -145,7 +145,7 @@ The email and password for the example user are:
 | **Email**    | admin@example.com |
 | **Password** | medplum_admin     |
 
-To make sure the server is working, you can access the health check at [http://localhost:8103/healthcheck](http://localhost:8103/healthcheck)
+To make sure the server is working, you can access the health check at [http://13.40.11.171:8103/healthcheck](http://13.40.11.171:8103/healthcheck)
 
 If everything is working, you should see the following in your browser:
 
@@ -170,6 +170,6 @@ cd packages/app
 npm run dev
 ```
 
-You can access the app at [http://localhost:3000/](http://localhost:3000/)
+You can access the app at [http://13.40.11.171:3000/](http://13.40.11.171:3000/)
 
 The default username is admin@example.com, default password medplum_admin.

@@ -40,7 +40,7 @@ Then, run the app
 npm run dev
 ```
 
-This app should run on `http://localhost:3000/`
+This app should run on `http://13.40.11.171:3000/`
 
 > [!NOTE]
 > Because `WebSocket Subscriptions` are currently experimental, the `websocket-subscriptions` feature flag needs to be enabled on your `Project` resource for this demo to work.

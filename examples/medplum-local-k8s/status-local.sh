@@ -19,9 +19,9 @@ if kubectl get namespace medplum &>/dev/null; then
     # Check if Medplum is responding
     echo ""
     echo "🏥 Health Check:"
-    if kubectl exec -n medplum deployment/medplum -- node -e "fetch('http://localhost:8103/healthcheck').then(r => r.json()).then(console.log).catch(console.error)" 2>/dev/null; then
+    if kubectl exec -n medplum deployment/medplum -- node -e "fetch('http://13.40.11.171:8103/healthcheck').then(r => r.json()).then(console.log).catch(console.error)" 2>/dev/null; then
         echo "✅ Medplum is healthy!"
-        echo "🌐 Access at: http://localhost:8103"
+        echo "🌐 Access at: http://13.40.11.171:8103"
     else
         echo "❌ Medplum health check failed"
     fi

@@ -12,11 +12,11 @@ deployment:
     - name: MEDPLUM_PORT
       value: "8103"
     - name: MEDPLUM_BASE_URL
-      value: "http://localhost:8103/"
+      value: "http://13.40.11.171:8103/"
     - name: MEDPLUM_APP_BASE_URL
-      value: "http://localhost:3000/"
+      value: "http://13.40.11.171:3000/"
     - name: MEDPLUM_STORAGE_BASE_URL
-      value: "http://localhost:8103/storage/"
+      value: "http://13.40.11.171:8103/storage/"
 
     # Database configuration
     - name: MEDPLUM_DATABASE_HOST

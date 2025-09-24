@@ -14,7 +14,7 @@ The Docker Compose file includes the following containers:
 - [medplum/medplum-server](https://hub.docker.com/r/medplum/medplum-server)
 - [medplum/medplum-app](https://hub.docker.com/r/medplum/medplum-app)
 
-All the containers present are configured to work together out of the box with no configuration. Just run the commands above and go to http://localhost:3000 to get started with your own full-stack local instance of Medplum!
+All the containers present are configured to work together out of the box with no configuration. Just run the commands above and go to http://13.40.11.171:3000 to get started with your own full-stack local instance of Medplum!
 
 :::info
 

@@ -12,7 +12,7 @@ This sample application demonstrates how to use [NextAuth](https://next-auth.js.
 npm install
 ```
 
-2. [Create a Medplum ClientApplication](https://www.medplum.com/docs/auth/methods/oauth-auth-code#create-a-client-application) and set the `redirectUri` to `http://localhost:3000/api/auth/callback/medplum`.
+2. [Create a Medplum ClientApplication](https://www.medplum.com/docs/auth/methods/oauth-auth-code#create-a-client-application) and set the `redirectUri` to `http://13.40.11.171:3000/api/auth/callback/medplum`.
 
 3. Generate a NextAuth secret:
 

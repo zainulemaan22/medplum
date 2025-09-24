@@ -20,7 +20,7 @@ describe('Config', () => {
   });
 
   test('Load env config', async () => {
-    process.env.MEDPLUM_BASE_URL = 'http://localhost:3000';
+    process.env.MEDPLUM_BASE_URL = 'http://13.40.11.171:3000';
     process.env.MEDPLUM_PORT = '3000';
     process.env.MEDPLUM_DATABASE_PORT = '5432';
     process.env.MEDPLUM_REDIS_TLS = '{}';
@@ -29,7 +29,7 @@ describe('Config', () => {
 
     const config = await loadConfig('env');
     expect(config).toBeDefined();
-    expect(config.baseUrl).toStrictEqual('http://localhost:3000');
+    expect(config.baseUrl).toStrictEqual('http://13.40.11.171:3000');
     expect(config.port).toStrictEqual(3000);
     expect(config.database.port).toStrictEqual(5432);
     expect(config.redis.tls).toStrictEqual({});

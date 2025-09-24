@@ -16,10 +16,10 @@ npx @modelcontextprotocol/inspector
 
 Set "Transport Type" to "Streamable HTTP" (recommended transport).
 
-Set "URL" to the `/mcp/stream` path on your server, e.g. `http://localhost:8103/mcp/stream`.
+Set "URL" to the `/mcp/stream` path on your server, e.g. `http://13.40.11.171:8103/mcp/stream`.
 
 ### Testing SSE
 
 Set "Transport Type" to "SSE" (required by Claude and ChatGPT).
 
-Set "URL" to the `/mcp/sse` path on your server, e.g. `http://localhost:8103/mcp/sse`.
+Set "URL" to the `/mcp/sse` path on your server, e.g. `http://13.40.11.171:8103/mcp/sse`.

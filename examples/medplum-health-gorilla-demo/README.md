@@ -26,4 +26,4 @@ Then, run the app
 npm run dev
 ```
 
-Running these commands installs the app's dependencies and starts a `vite` development web server on [http://localhost:3000](http://localhost:3000). Visiting the site should greet you with a Medplum login page.
+Running these commands installs the app's dependencies and starts a `vite` development web server on [http://13.40.11.171:3000](http://13.40.11.171:3000). Visiting the site should greet you with a Medplum login page.

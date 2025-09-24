@@ -355,7 +355,7 @@ jobs:
           MAX_RETRIES=10
           RETRY_COUNT=0
 
-          until curl -s -f http://localhost:8103/healthcheck > /dev/null; do
+          until curl -s -f http://13.40.11.171:8103/healthcheck > /dev/null; do
             if [ $RETRY_COUNT -ge $MAX_RETRIES ]; then
               echo "Max retries reached. Deployment not ready."
               exit 1

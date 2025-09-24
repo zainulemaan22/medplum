@@ -101,10 +101,10 @@ describe('Well Known', () => {
 
   test('Protected resource with custom request', async () => {
     const res = await request(app).get(
-      '/.well-known/oauth-protected-resource?resource=http://localhost:8103/fhir/R4/Patient/123'
+      '/.well-known/oauth-protected-resource?resource=http://13.40.11.171:8103/fhir/R4/Patient/123'
     );
     expect(res.status).toBe(200);
-    expect(res.body.resource).toBe('http://localhost:8103/fhir/R4/Patient/123');
+    expect(res.body.resource).toBe('http://13.40.11.171:8103/fhir/R4/Patient/123');
   });
 
   test('Protected resource with invalid resource', async () => {

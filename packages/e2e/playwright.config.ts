@@ -7,7 +7,7 @@ const config: PlaywrightTestConfig = {
     timeout: 5000,
   },
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://13.40.11.171:3000',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'retain-on-failure',

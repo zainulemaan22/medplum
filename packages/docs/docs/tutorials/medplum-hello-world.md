@@ -37,7 +37,7 @@ Then, run the app
 npm run dev
 ```
 
-You should be able to access the Hello World app at [http://localhost:3000/](http://localhost:3000/). You can stop the Node JS process using `Ctrl+C`.
+You should be able to access the Hello World app at [http://13.40.11.171:3000/](http://13.40.11.171:3000/). You can stop the Node JS process using `Ctrl+C`.
 
 ## Explore Medplum Hello World
 

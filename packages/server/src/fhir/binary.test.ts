@@ -84,10 +84,10 @@ describe('Binary', () => {
       .post('/fhir/R4/Binary')
       .set('Authorization', 'Bearer ' + accessToken)
       .set('Content-Type', ContentType.TEXT)
-      .set('Origin', 'http://localhost:3000')
+      .set('Origin', 'http://13.40.11.171:3000')
       .send('Hello world');
     expect(res.status).toBe(201);
-    expect(res.headers['access-control-allow-origin']).toBe('http://localhost:3000');
+    expect(res.headers['access-control-allow-origin']).toBe('http://13.40.11.171:3000');
   });
 
   test('Unsupported content encoding', async () => {

@@ -8,8 +8,8 @@ This guide provides a simple, step-by-step process to deploy the Medplum healthc
 
 **What you'll get:**
 
-- 🏥 Medplum FHIR server running on http://localhost:8103
-- 🖥️ Medplum web app running on http://localhost:3000
+- 🏥 Medplum FHIR server running on http://13.40.11.171:8103
+- 🖥️ Medplum web app running on http://13.40.11.171:3000
 - 🗄️ PostgreSQL database for data storage
 - ⚡ Redis cache for performance
 - 🔧 Fission serverless framework for running Medplum Bots
@@ -99,7 +99,7 @@ The script will:
 ./status-local.sh
 
 # Test the API directly
-curl http://localhost:8103/healthcheck
+curl http://13.40.11.171:8103/healthcheck
 ```
 
 ## 🌐 Accessing Medplum
@@ -108,11 +108,11 @@ Once deployed, Medplum is accessible at:
 
 | URL                                    | Purpose                   |
 | -------------------------------------- | ------------------------- |
-| http://localhost:3000                  | Medplum web application   |
-| http://localhost:8103                  | Main Medplum server       |
-| http://localhost:8103/healthcheck      | Health check endpoint     |
-| http://localhost:8103/fhir/R4/metadata | FHIR capability statement |
-| http://localhost:8103/fhir/R4/         | FHIR API base URL         |
+| http://13.40.11.171:3000                  | Medplum web application   |
+| http://13.40.11.171:8103                  | Main Medplum server       |
+| http://13.40.11.171:8103/healthcheck      | Health check endpoint     |
+| http://13.40.11.171:8103/fhir/R4/metadata | FHIR capability statement |
+| http://13.40.11.171:8103/fhir/R4/         | FHIR API base URL         |
 
 ## ⚡ Fission Integration
 
@@ -169,7 +169,7 @@ kubectl scale deployment medplum --replicas=2 -n medplum
 ### Health Check
 
 ```bash
-curl http://localhost:8103/healthcheck
+curl http://13.40.11.171:8103/healthcheck
 ```
 
 Expected response:
@@ -187,7 +187,7 @@ Expected response:
 
 ```bash
 # Get FHIR capability statement
-curl http://localhost:8103/fhir/R4/metadata
+curl http://13.40.11.171:8103/fhir/R4/metadata
 ```
 
 ### Fission Test
@@ -339,8 +339,8 @@ kubectl logs -f -n fission deployment/router
 
 Once you have Medplum with Fission running:
 
-1. **Explore the FHIR API** at http://localhost:8103/fhir/R4/
-2. **Try the web app** at http://localhost:3000
+1. **Explore the FHIR API** at http://13.40.11.171:8103/fhir/R4/
+2. **Try the web app** at http://13.40.11.171:3000
 3. **Create your first Bot** using the Medplum web interface
 4. **Deploy Bots to Fission** for serverless execution
 5. **Read the Medplum documentation** at https://www.medplum.com/docs

@@ -44,7 +44,7 @@ The Medplum OpenID configuration requires HTTPS. We recommend using .
 | Service | HTTP address                     | HTTPS address                     |
 | ------- | -------------------------------- | --------------------------------- |
 | api     | http://host.docker.internal/8103 | https://host.docker.internal/8104 |
-| app     | http://localhost:3000            | https://localhost:8106            |
+| app     | http://13.40.11.171:3000            | https://localhost:8106            |
 
 ### Update the app config
 
@@ -60,9 +60,9 @@ MEDPLUM_BASE_URL=https://host.docker.internal:8104/
 
 Open `packages/server/medplum.config.json`
 
-Replace all instances of `http://localhost:8103/` with `https://host.docker.internal:8104/`
+Replace all instances of `http://13.40.11.171:8103/` with `https://host.docker.internal:8104/`
 
-Replace all instances of `http://localhost:3000/` with `https://localhost:8106/`
+Replace all instances of `http://13.40.11.171:3000/` with `https://localhost:8106/`
 
 The result should look something like this:
 

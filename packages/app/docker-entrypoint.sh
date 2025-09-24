@@ -4,7 +4,7 @@
 set -e
 
 # Defaults taken from .env.defaults in Medplum monorepo packages/app
-: ${MEDPLUM_BASE_URL:="http://localhost:8103/"}
+: ${MEDPLUM_BASE_URL:="http://13.40.11.171:8103/"}
 : ${MEDPLUM_CLIENT_ID:=""}
 : ${GOOGLE_CLIENT_ID:=""}
 : ${RECAPTCHA_SITE_KEY:="6LfHdsYdAAAAAC0uLnnRrDrhcXnziiUwKd8VtLNq"}
