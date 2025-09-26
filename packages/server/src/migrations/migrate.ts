@@ -59,7 +59,7 @@ export async function main(): Promise<void> {
   indexStructureDefinitionsAndSearchParameters();
 
   const dbClient = new Client({
-    host: 'localhost',
+    host: '13.40.11.171',
     port: 5432,
     database: 'medplum',
     user: 'medplum',

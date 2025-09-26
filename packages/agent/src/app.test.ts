@@ -571,7 +571,7 @@ describe('App', () => {
 
     // Create a connection to the prod channel
     const hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9002,
     });
 
@@ -1015,7 +1015,7 @@ describe('App', () => {
 
     // Try to send HL7 message -- should fail
     let hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9010,
     });
 
@@ -1091,7 +1091,7 @@ describe('App', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57099',
+          remote: 'mllp://13.40.11.171:57099',
         } satisfies AgentTransmitRequest)
       )
     );
@@ -1119,7 +1119,7 @@ describe('App', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57099',
+          remote: 'mllp://13.40.11.171:57099',
         } satisfies AgentTransmitRequest)
       )
     );
@@ -1169,7 +1169,7 @@ describe('App', () => {
 
     // Try to send HL7 message -- should succeed
     hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9010,
     });
 
@@ -1218,7 +1218,7 @@ describe('App', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57099',
+          remote: 'mllp://13.40.11.171:57099',
           callback: getReferenceString(agent) + '-' + randomUUID(),
         })
       )
@@ -1334,7 +1334,7 @@ describe('App', () => {
 
     // Try to send HL7 message -- should fail
     let hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9010,
     });
 
@@ -1366,7 +1366,7 @@ describe('App', () => {
 
     // This one should succeed
     hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9011,
     });
 
@@ -1437,7 +1437,7 @@ describe('App', () => {
 
     // Try to send HL7 message -- should succeed
     hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9010,
     });
 
@@ -1459,7 +1459,7 @@ describe('App', () => {
 
     // This one should succeed
     hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9011,
     });
 
@@ -1564,7 +1564,7 @@ describe('App', () => {
     expect(app.channels.has('test')).toBe(true);
 
     const hl7Client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 9020,
     });
 

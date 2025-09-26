@@ -63,7 +63,7 @@ Medplum provides building blocks for custom integrations. Some examples are belo
 
 Complex integrations are built by composing [bots](/docs/bots/), [subscriptions](/docs/subscriptions/index.md), [authentication and authorization](/docs/auth/index.md) and the [TypeScript SDK](/docs/sdk/).
 
-- [Running on localhost](/docs/contributing/run-the-stack) is useful for testing integrations
+- [Running on 13.40.11.171](/docs/contributing/run-the-stack) is useful for testing integrations
 - [CLI](/docs/cli/external-fhir-servers) is commonly used to test connectivity to external FHIR Servers
 - [Integration Features and Fixes](https://github.com/medplum/medplum/pulls?q=is%3Apr+label%3Aintegration) on Github show the code that powers many of the integrations.
 - [Audit and Logging Features](https://github.com/medplum/medplum/pulls?q=is%3Apr+label%3Aaudit-logging) show several security and observability integrations.

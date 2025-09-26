@@ -15,7 +15,7 @@ export default defineConfig({
   envPrefix: ['MEDPLUM_', 'GOOGLE_'],
   plugins: [react()],
   server: {
-    host: 'localhost',
+    host: '13.40.11.171',
     port: 3000,
   },
 });

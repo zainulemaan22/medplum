@@ -179,13 +179,13 @@ See [Medplum CLI](/docs/cli) for more detailed installation instructions.
 Then send a test message:
 
 ```bash
-medplum hl7 send localhost 56000 --generate-example
+medplum hl7 send 13.40.11.171 56000 --generate-example
 ```
 
 You can also send a specific test message, stored in a `.hl7`, similar extension (`.oru`, `.adt`, etc.), or `.txt.` file, via the following command:
 
 ```bash
-npx medplum hl7 send localhost 56000 --file <some-file.hl7>
+npx medplum hl7 send 13.40.11.171 56000 --file <some-file.hl7>
 ```
 
 There should now be an `AuditEvent` in Medplum for the message.

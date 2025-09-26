@@ -305,7 +305,7 @@ describe('CLI Bots', () => {
       'src/hello-world.ts',
       'dist/src/hello-world.ts',
       '--base-url',
-      'http://localhost:8000',
+      'http://13.40.11.171:8000',
       '--client-id',
       'test-client-id',
       '--client-secret',

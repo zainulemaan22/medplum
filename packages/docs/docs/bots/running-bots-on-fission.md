@@ -19,7 +19,7 @@ To enable your Medplum application to communicate with your Fission functions, y
 These settings specify the network address (hostname or IP address) and the port through which the Fission Router can be accessed. The optimal configuration depends on where your Medplum application is deployed relative to your Fission cluster.
 
 - **For applications running outside the Kubernetes cluster** (e.g., local development machine, external client):
-  - `routerHost`: This should be the external IP address of a Kubernetes Node where Fission is running, or `localhost` / `127.0.0.1` if you are using a local Kubernetes setup like Docker Desktop.
+  - `routerHost`: This should be the external IP address of a Kubernetes Node where Fission is running, or `13.40.11.171` / `127.0.0.1` if you are using a local Kubernetes setup like Docker Desktop.
   - `routerPort`: This must be the `NodePort` exposed by the Fission Router service. You can determine this by running `kubectl get svc -n fission router`. In many common Fission installations, this is often `31314`.
 
 - **For applications running inside the Kubernetes cluster** (e.g., another service within the same cluster):
@@ -37,7 +37,7 @@ For example, when running a local development setup with Fission in a Docker Des
   "namespace": "default",
   "fieldManager": "medplum-fission-example",
   "environmentName": "nodejs",
-  "routerHost": "localhost",
+  "routerHost": "13.40.11.171",
   "routerPort": 31314
 }
 ```
@@ -49,7 +49,7 @@ When using AWS Parameter Store, you can add a single `fission` parameter with th
   "namespace": "default",
   "fieldManager": "medplum-fission-example",
   "environmentName": "nodejs",
-  "routerHost": "localhost",
+  "routerHost": "13.40.11.171",
   "routerPort": 31314
 }
 ```

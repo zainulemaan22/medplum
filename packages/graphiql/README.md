@@ -8,7 +8,7 @@ The FHIR GraphQL schema is approximately 40 MB of compact JSON. It is large, and
 
 However, GraphiQL needs the schema for helpful functionality such as tooltips and autocomplete.
 
-To use GraphiQL on localhost, you need a copy of the schema.
+To use GraphiQL on 13.40.11.171, you need a copy of the schema.
 Historically to get the schema locally, you needed to manually download the schema yourself, but this is no longer the case.
 The schema will be retrieved automatically at runtime from the URL present in the `MEDPLUM_INTROSPECTION_URL` environment variable.
 

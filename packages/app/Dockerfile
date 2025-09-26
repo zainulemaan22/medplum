@@ -7,7 +7,7 @@ USER root
 COPY <<EOF /etc/nginx/conf.d/default.conf
 server {
     listen 3000;
-    server_name localhost;
+    server_name 13.40.11.171;
     root /usr/share/nginx/html;
     index index.html;
 

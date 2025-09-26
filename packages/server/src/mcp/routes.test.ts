@@ -36,7 +36,7 @@ describe('MCP Routes', () => {
     }
     port = address.port;
 
-    config.baseUrl = `http://localhost:${port}/`;
+    config.baseUrl = `http://13.40.11.171:${port}/`;
   });
 
   afterAll(async () => {
@@ -75,7 +75,7 @@ describe('MCP Routes', () => {
   test.each<string>(['stream', 'sse'])('MCP with %s transport', async (transportType: string) => {
     const TransportClass = transportType === 'stream' ? StreamableHTTPClientTransport : SSEClientTransport;
 
-    const baseUrl = `http://localhost:${port}/mcp/${transportType}`;
+    const baseUrl = `http://13.40.11.171:${port}/mcp/${transportType}`;
 
     const transport = new TransportClass(new URL(baseUrl), {
       requestInit: {

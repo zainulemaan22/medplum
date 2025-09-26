@@ -141,7 +141,7 @@ describe('HomePage', () => {
   });
 
   test('Export CSV button', async () => {
-    window.URL.createObjectURL = jest.fn(() => 'blob:http://localhost/blob');
+    window.URL.createObjectURL = jest.fn(() => 'blob:http://13.40.11.171/blob');
     window.open = jest.fn();
 
     // Mock the export operation

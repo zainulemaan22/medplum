@@ -70,7 +70,7 @@ describe('DOM utils', () => {
     });
 
     test('download a JSON file', () => {
-      URL.createObjectURL = jest.fn(() => 'blob:http://localhost/blob');
+      URL.createObjectURL = jest.fn(() => 'blob:http://13.40.11.171/blob');
       URL.revokeObjectURL = jest.fn();
 
       exportJsonFile(jsonFile.entry);

@@ -118,7 +118,7 @@ describe('AsyncJobExecutor', () => {
     const callback = jest.fn();
 
     try {
-      exec.getContentLocation('http://localhost');
+      exec.getContentLocation('http://13.40.11.171');
     } catch (err) {
       expect((err as Error).message).toBe('AsyncJob missing');
     }

@@ -17,7 +17,7 @@ describe('Deploy Fission bots', () => {
       namespace: 'default',
       fieldManager: 'medplum-fission-example',
       environmentName: 'nodejs',
-      routerHost: 'localhost',
+      routerHost: '13.40.11.171',
       routerPort: 31314,
     };
     await initApp(app, config);

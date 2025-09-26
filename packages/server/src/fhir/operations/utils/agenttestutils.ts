@@ -56,7 +56,7 @@ export async function mockAgentResponse<
   }
 
   if (!agentWsMap.has(agent.id)) {
-    const ws = new WebSocket(getWebSocketUrl(`ws://localhost:${serverPort}/`, '/ws/agent'));
+    const ws = new WebSocket(getWebSocketUrl(`ws://13.40.11.171:${serverPort}/`, '/ws/agent'));
     ws.binaryType = 'nodebuffer';
     agentWsMap.set(agent.id, ws);
   }

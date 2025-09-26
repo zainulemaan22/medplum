@@ -25,11 +25,11 @@ const alias: NonNullable<UserConfig['resolve']>['alias'] = Object.fromEntries(
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: 'localhost',
+    host: '13.40.11.171',
     port: 3000,
   },
   preview: {
-    host: 'localhost',
+    host: '13.40.11.171',
     port: 3000,
   },
   resolve: {

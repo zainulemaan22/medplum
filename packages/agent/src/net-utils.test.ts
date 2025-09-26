@@ -147,7 +147,7 @@ describe('Agent Net Utils', () => {
           JSON.stringify({
             type: 'agent:transmit:request',
             contentType: ContentType.PING,
-            remote: 'localhost',
+            remote: '13.40.11.171',
             callback,
             body: 'PING',
           } satisfies AgentTransmitRequest)
@@ -185,7 +185,7 @@ describe('Agent Net Utils', () => {
           JSON.stringify({
             type: 'agent:transmit:request',
             contentType: ContentType.PING,
-            remote: 'https://localhost:3001',
+            remote: 'https://13.40.11.171:3001',
             callback,
             body: 'PING 1',
           } satisfies AgentTransmitRequest)
@@ -375,7 +375,7 @@ describe('Agent Net Utils', () => {
         reject(new Error('Timeout'));
       }, 3500);
 
-      // We can ping localhost, woohoo
+      // We can ping 13.40.11.171, woohoo
       await expect(messageReceived).resolves.toMatchObject<Partial<AgentTransmitResponse>>({
         type: 'agent:transmit:response',
         body: expect.stringMatching(/ping statistics/i),

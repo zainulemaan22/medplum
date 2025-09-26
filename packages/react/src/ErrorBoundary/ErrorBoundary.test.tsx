@@ -11,7 +11,7 @@ function ErrorComponent(): JSX.Element {
 class MockLocation {
   #href: string;
   constructor() {
-    this.#href = 'http://localhost/';
+    this.#href = 'http://13.40.11.171/';
   }
   get href(): string {
     return this.#href;

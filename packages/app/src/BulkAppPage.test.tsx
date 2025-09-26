@@ -10,7 +10,7 @@ const medplum = new MockClient();
 
 describe('BulkAppPage', () => {
   async function setup(url: string): Promise<void> {
-    const urlObj = new URL(url, 'http://localhost');
+    const urlObj = new URL(url, 'http://13.40.11.171');
     Object.defineProperty(window, 'location', {
       value: {
         href: urlObj.href,

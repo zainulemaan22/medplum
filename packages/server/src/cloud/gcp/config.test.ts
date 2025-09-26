@@ -38,7 +38,7 @@ describe('GCP Config', () => {
     test('handles dot syntax', async () => {
       const inputConfig: Record<string, unknown> = {
         baseUrl: 'https://www.example.com',
-        'database.host': 'localhost',
+        'database.host': '13.40.11.171',
         'database.port': 5432,
         'database.ssl.require': 'true',
       };
@@ -54,7 +54,7 @@ describe('GCP Config', () => {
       expect(config).toMatchObject({
         baseUrl: 'https://www.example.com',
         database: {
-          host: 'localhost',
+          host: '13.40.11.171',
           port: 5432,
           ssl: {
             require: true,

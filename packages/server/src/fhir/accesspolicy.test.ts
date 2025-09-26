@@ -2609,7 +2609,7 @@ describe('AccessPolicy', () => {
         criteria: 'Communication',
         channel: {
           type: 'rest-hook',
-          endpoint: 'http://localhost:1337',
+          endpoint: 'http://13.40.11.171:1337',
         },
       });
       expect(subscription).toBeDefined();
@@ -2622,7 +2622,7 @@ describe('AccessPolicy', () => {
         criteria: 'Communication',
         channel: {
           type: 'websocket',
-          endpoint: 'http://localhost:1337',
+          endpoint: 'http://13.40.11.171:1337',
         },
       });
       expect(subscription).toBeDefined();
@@ -2638,7 +2638,7 @@ describe('AccessPolicy', () => {
           criteria: 'Communication',
           channel: {
             type: 'rest-hook',
-            endpoint: 'http://localhost:1337',
+            endpoint: 'http://13.40.11.171:1337',
           },
         })
       ).rejects.toThrow();
@@ -2666,7 +2666,7 @@ describe('AccessPolicy', () => {
         criteria: 'Patient?name=Homer',
         channel: {
           type: 'rest-hook',
-          endpoint: 'http://localhost:1337',
+          endpoint: 'http://13.40.11.171:1337',
         },
       });
 

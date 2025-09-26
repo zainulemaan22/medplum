@@ -619,7 +619,7 @@ describe('FhircastConnection', () => {
   let connection: FhircastConnection;
 
   beforeAll(() => {
-    wsServer = new WS('ws://localhost:1234', { jsonProtocol: true });
+    wsServer = new WS('ws://13.40.11.171:1234', { jsonProtocol: true });
   });
 
   afterAll(() => {
@@ -632,7 +632,7 @@ describe('FhircastConnection', () => {
       mode: 'subscribe',
       channelType: 'websocket',
       events: ['Patient-open'],
-      endpoint: 'ws://localhost:1234',
+      endpoint: 'ws://13.40.11.171:1234',
     } satisfies SubscriptionRequest;
 
     connection = new FhircastConnection(subRequest);
@@ -730,7 +730,7 @@ describe('FhircastConnection', () => {
           // @ts-expect-error Invalid channelType
           channelType: 'webhooks',
           events: ['Patient-open'],
-          endpoint: 'ws://localhost:1234',
+          endpoint: 'ws://13.40.11.171:1234',
         })
     ).toThrow(OperationOutcomeError);
   });

@@ -70,7 +70,7 @@ describe('FHIRcast routes', () => {
     tokenForAnotherProject = _accessToken2;
 
     await new Promise<void>((resolve) => {
-      server.listen(0, 'localhost', 511, resolve);
+      server.listen(0, '13.40.11.171', 511, resolve);
     });
   });
 
@@ -192,7 +192,7 @@ describe('FHIRcast routes', () => {
         'hub.events': 'Patient-open',
       });
     expect(res1.status).toBe(202);
-    expect(res1.body['hub.channel.endpoint']).toMatch(/ws:\/\/localhost:8103\/ws\/fhircast\/*/);
+    expect(res1.body['hub.channel.endpoint']).toMatch(/ws:\/\/13.40.11.171:8103\/ws\/fhircast\/*/);
     expect(res1.body['hub.channel.endpoint']).not.toContain('topic');
 
     const res2 = await request(server)
@@ -221,7 +221,7 @@ describe('FHIRcast routes', () => {
         'hub.events': 'Patient-open',
       });
     expect(res1.status).toBe(202);
-    expect(res1.body['hub.channel.endpoint']).toMatch(/ws:\/\/localhost:8103\/ws\/fhircast\/*/);
+    expect(res1.body['hub.channel.endpoint']).toMatch(/ws:\/\/13.40.11.171:8103\/ws\/fhircast\/*/);
     expect(res1.body['hub.channel.endpoint']).not.toContain('topic');
 
     const res2 = await request(server)

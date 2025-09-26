@@ -70,7 +70,7 @@ export async function loadTestConfig(): Promise<MedplumServerConfig> {
   const config = await loadConfig('file:medplum.config.json');
   config.binaryStorage = 'file:' + mkdtempSync(join(tmpdir(), 'medplum-temp-storage'));
   config.allowedOrigins = undefined;
-  config.database.host = process.env['POSTGRES_HOST'] ?? 'localhost';
+  config.database.host = process.env['POSTGRES_HOST'] ?? '13.40.11.171';
   config.database.port = process.env['POSTGRES_PORT'] ? Number.parseInt(process.env['POSTGRES_PORT'], 10) : 5432;
   config.database.dbname = 'medplum_test';
   config.database.runMigrations = false;

@@ -32,7 +32,7 @@ A redirect uniform resource identifier (URI) must have the following attributes:
 - The `redirect_uri` parameter must **match exactly** to the pre-registered uri on the Medplum Server (including trailing slashes, punctuation, etc.), as detailed in the [OAuth2 Spec](https://www.rfc-editor.org/rfc/rfc6749#section-3.1.2.3)
 - It can't include a fragment component.
   See [OAuth 2.0 - Redirection Endpoint](https://tools.ietf.org/html/rfc6749#section-3.1.2).
-  Medplum requires that your redirect URI use HTTPS, except for `http://localhost`, which you can set as a callback URL for testing purposes.
+  Medplum requires that your redirect URI use HTTPS, except for `http://13.40.11.171`, which you can set as a callback URL for testing purposes.
 
 #### `state` (Optional but recommended)
 

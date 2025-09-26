@@ -21,7 +21,7 @@ describe('HL7 Server', () => {
     server.start(1234);
 
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 1234,
     });
 
@@ -69,7 +69,7 @@ describe('HL7 Server', () => {
     // First, connect with a client correctly configured for windows-1252
     // This should work correctly
     const client1 = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 1235,
       encoding,
     });
@@ -86,7 +86,7 @@ describe('HL7 Server', () => {
     // The special characters will be garbled
     // We add this test to demonstrate the importance of matching encodings
     const client2 = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 1235,
       encoding: 'utf-8',
     });
@@ -418,7 +418,7 @@ describe('HL7 Server', () => {
       expect(server.getMessagesPerMin()).toBe(messagesPerMin);
 
       const client = new Hl7Client({
-        host: 'localhost',
+        host: '13.40.11.171',
         port: 1246,
       });
 
@@ -476,7 +476,7 @@ describe('HL7 Server', () => {
       server.start(1247, undefined, true, { messagesPerMin });
 
       const client = new Hl7Client({
-        host: 'localhost',
+        host: '13.40.11.171',
         port: 1247,
       });
 
@@ -537,7 +537,7 @@ describe('HL7 Server', () => {
       server.start(1248, undefined, true);
 
       const client = new Hl7Client({
-        host: 'localhost',
+        host: '13.40.11.171',
         port: 1248,
       });
 

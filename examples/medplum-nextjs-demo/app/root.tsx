@@ -8,7 +8,7 @@ import '@medplum/react/styles.css';
 import { JSX, ReactNode } from 'react';
 
 const medplum = new MedplumClient({
-  // Uncomment this to run against the server on your localhost
+  // Uncomment this to run against the server on your 13.40.11.171
   // baseUrl: 'http://13.40.11.171:8103/',
 
   // Handle unauthenticated requests

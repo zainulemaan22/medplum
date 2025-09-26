@@ -44,7 +44,7 @@ describe('Agent Push', () => {
     accessToken = await initTestAuth();
 
     await new Promise<void>((resolve) => {
-      server.listen(0, 'localhost', 511, () => {
+      server.listen(0, '13.40.11.171', 511, () => {
         port = (server.address() as AddressInfo).port;
         resolve();
       });
@@ -370,7 +370,7 @@ round-trip min/avg/max/stddev = 10.316/10.316/10.316/nan ms`,
       .send({
         contentType: ContentType.PING,
         body: 'PING',
-        destination: 'localhost',
+        destination: '13.40.11.171',
         waitForResponse: true,
       } satisfies AgentPushParameters)
       .then(resolve)
@@ -401,10 +401,10 @@ round-trip min/avg/max/stddev = 10.316/10.316/10.316/nan ms`,
         statusCode: 200,
         contentType: ContentType.TEXT,
         body: `
-PING localhost (127.0.0.1): 56 data bytes
+PING 13.40.11.171 (127.0.0.1): 56 data bytes
 64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.081 ms
         
---- localhost ping statistics ---
+--- 13.40.11.171 ping statistics ---
 1 packets transmitted, 1 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 0.081/0.081/0.081/nan ms`,
       } satisfies AgentTransmitResponse)

@@ -26,7 +26,7 @@ See the SendGrid [How to Send an SMTP Email](https://docs.sendgrid.com/for-devel
 
 ## Configuring Medplum Server for SMTP
 
-Open your Medplum server config file. When developing on localhost, the default config file location is `packages/server/medplum.config.json`.
+Open your Medplum server config file. When developing on 13.40.11.171, the default config file location is `packages/server/medplum.config.json`.
 
 Change the `supportEmail` to your Sender Identity email address:
 

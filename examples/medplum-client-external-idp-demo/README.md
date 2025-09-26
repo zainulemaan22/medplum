@@ -20,7 +20,7 @@ Setup your Medplum account:
 
 - [Register for a Medplum account](https://www.medplum.com/docs/tutorials/register)
 - Create a `ClientApplication`
-- Set the "Redirect URI" to "http://localhost:8000/"
+- Set the "Redirect URI" to "http://13.40.11.171:8000/"
 - Add an external identity provider with the details from above
 
 Update the values in `src/main.ts` accordingly.
@@ -31,4 +31,4 @@ Now you can run this demo:
 npm run dev
 ```
 
-Open your web browser to <http://localhost:8000/>
+Open your web browser to <http://13.40.11.171:8000/>

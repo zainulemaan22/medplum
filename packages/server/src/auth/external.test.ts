@@ -220,7 +220,7 @@ describe('External', () => {
     expect(res.status).toBe(302);
 
     const redirect = new URL(res.header.location);
-    expect(redirect.host).toStrictEqual('localhost:3000');
+    expect(redirect.host).toStrictEqual('13.40.11.171:3000');
     expect(redirect.pathname).toStrictEqual('/signin');
     expect(redirect.searchParams.get('login')).toBeTruthy();
   });

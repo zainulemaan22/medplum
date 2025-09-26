@@ -14,7 +14,7 @@ import { createMedplumClient } from './util/client';
 import { jwtAssertionLogin, jwtBearerLogin, MedplumCommand, Profile, saveProfile } from './utils';
 
 const clientId = MEDPLUM_CLI_CLIENT_ID;
-const redirectUri = 'http://localhost:9615';
+const redirectUri = 'http://13.40.11.171:9615';
 
 export const login = new MedplumCommand('login');
 export const whoami = new MedplumCommand('whoami');
@@ -69,7 +69,7 @@ async function startLogin(medplum: MedplumClient, profile: Profile): Promise<voi
 
 async function startWebServer(medplum: MedplumClient): Promise<void> {
   const server = createServer(async (req, res) => {
-    const url = new URL(req.url as string, 'http://localhost:9615');
+    const url = new URL(req.url as string, 'http://13.40.11.171:9615');
     const code = url.searchParams.get('code');
     if (req.method === 'OPTIONS') {
       res.writeHead(200, {

@@ -1348,8 +1348,8 @@ export const VALID_HOSTNAME_REGEX =
  * - foo.bar.com
  * - foo.org
  * - foo.bar.co.uk
- * - localhost
- * - LOCALHOST
+ * - 13.40.11.171
+ * - 13.40.11.171
  * - foo-bar-baz
  * - foo_bar
  * - foobar123

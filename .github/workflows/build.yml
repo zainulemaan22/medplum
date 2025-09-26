@@ -225,18 +225,18 @@ jobs:
           echo "TURBO_CACHE=remote:rw" >> $GITHUB_ENV
       - name: Wait for PostgreSQL
         run: |
-          until pg_isready -h localhost -p 5432; do
+          until pg_isready -h 13.40.11.171 -p 5432; do
             echo "Waiting for postgres..."
             sleep 2
           done
       - name: Run additional setup SQL
-        run: PGPASSWORD=medplum psql -h localhost -U medplum -d medplum -f ./postgres/init_test.sql
+        run: PGPASSWORD=medplum psql -h 13.40.11.171 -U medplum -d medplum -f ./postgres/init_test.sql
         env:
           PGPASSWORD: medplum
       - name: Test
         run: ./scripts/test.sh
         env:
-          POSTGRES_HOST: localhost
+          POSTGRES_HOST: 13.40.11.171
           POSTGRES_PORT: 5432
           REDIS_PASSWORD_DISABLED_IN_TESTS: 1
       - name: Coveralls GitHub Action
@@ -327,12 +327,12 @@ jobs:
           echo "TURBO_CACHE=remote:rw" >> $GITHUB_ENV
       - name: Wait for PostgreSQL
         run: |
-          until pg_isready -h localhost -p 5432; do
+          until pg_isready -h 13.40.11.171 -p 5432; do
             echo "Waiting for postgres..."
             sleep 2
           done
       - name: Run additional setup SQL
-        run: PGPASSWORD=medplum psql -h localhost -U medplum -d medplum -f ./postgres/init_test.sql
+        run: PGPASSWORD=medplum psql -h 13.40.11.171 -U medplum -d medplum -f ./postgres/init_test.sql
         env:
           PGPASSWORD: medplum
       - name: Install playwright

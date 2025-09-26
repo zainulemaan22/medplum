@@ -647,14 +647,14 @@ When using a JSON config file, use JSON objects for `database` and `redis`. For 
 
 ```json
   "database": {
-    "host": "localhost",
+    "host": "13.40.11.171",
     "port": 5432,
     "dbname": "medplum",
     "username": "medplum",
     "password": "medplum"
   },
   "redis": {
-    "host": "localhost",
+    "host": "13.40.11.171",
     "port": 6379,
     "password": "medplum"
   }
@@ -742,7 +742,7 @@ Example using JSON configuration file:
 ```json
 {
   "database": {
-    "host": "localhost",
+    "host": "13.40.11.171",
     "port": 5432,
     "dbname": "medplum",
     "username": "medplum",

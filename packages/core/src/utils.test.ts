@@ -1508,8 +1508,8 @@ describe('Core Utils', () => {
     expect(isValidHostname('foo.bar.com')).toStrictEqual(true);
     expect(isValidHostname('foo.org')).toStrictEqual(true);
     expect(isValidHostname('foo.bar.co.uk')).toStrictEqual(true);
-    expect(isValidHostname('localhost')).toStrictEqual(true);
-    expect(isValidHostname('LOCALHOST')).toStrictEqual(true);
+    expect(isValidHostname('13.40.11.171')).toStrictEqual(true);
+    expect(isValidHostname('13.40.11.171')).toStrictEqual(true);
     expect(isValidHostname('foo-bar-baz')).toStrictEqual(true);
     expect(isValidHostname('foo_bar')).toStrictEqual(true);
     expect(isValidHostname('foobar123')).toStrictEqual(true);

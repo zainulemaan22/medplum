@@ -203,10 +203,10 @@ Description: Web Application Hostname
 
 Template: medplum/db_host
 Type: string
-Default: localhost
+Default: 13.40.11.171
 Description: Database Host
  Enter the PostgreSQL server hostname.
- Leave as localhost if the database is on this machine.
+ Leave as 13.40.11.171 if the database is on this machine.
 
 Template: medplum/db_password
 Type: password
@@ -228,7 +228,7 @@ set -e
 db_input high medplum/server_hostname || true
 db_input high medplum/app_hostname || true
 db_input medium medplum/db_host || true
-if db_get medplum/db_host && [ "\$RET" != "localhost" ]; then
+if db_get medplum/db_host && [ "\$RET" != "13.40.11.171" ]; then
     db_input high medplum/db_password || true
 fi
 db_go || true

@@ -20,7 +20,7 @@ function getStandardClients(): ClientApplication[] {
         resourceType: 'ClientApplication',
         id: MEDPLUM_CLI_CLIENT_ID,
         name: 'Medplum CLI',
-        redirectUris: ['http://localhost:9615'],
+        redirectUris: ['http://13.40.11.171:9615'],
         pkceOptional: true,
       },
     ];

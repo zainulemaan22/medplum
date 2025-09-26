@@ -22,7 +22,7 @@ const MEDPLUM_CLIENT_ID = '=';
  * Your web application redirect URL.
  * This value must match the redirect URI in your Medplum client application.
  */
-const WEB_APP_REDIRECT_URI = 'http://localhost:8000/signin';
+const WEB_APP_REDIRECT_URI = 'http://13.40.11.171:8000/signin';
 
 /**
  * External OAuth2 "authorize" endpoint URL.

@@ -33,18 +33,18 @@ Follow these instructions to setup your local dev environment with the Conforman
 Requirements:
 
 - The Conformance Suite running in Docker must be able to access the Medplum API server
-  - That means that the Medplum API server cannot simply use "localhost"
+  - That means that the Medplum API server cannot simply use "13.40.11.171"
   - Instead, we will use `host.docker.internal`
 - The Medplum API server cookies require HTTPS
   - That means we cannot simply use webpack-dev-server and ts-node-dev
-  - Instead, we will use [Caddy](https://caddyserver.com/) for an easy localhost HTTPS proxy
+  - Instead, we will use [Caddy](https://caddyserver.com/) for an easy 13.40.11.171 HTTPS proxy
 
 The Medplum OpenID configuration requires HTTPS. We recommend using .
 
 | Service | HTTP address                     | HTTPS address                     |
 | ------- | -------------------------------- | --------------------------------- |
 | api     | http://host.docker.internal/8103 | https://host.docker.internal/8104 |
-| app     | http://13.40.11.171:3000            | https://localhost:8106            |
+| app     | http://13.40.11.171:3000            | https://13.40.11.171:8106            |
 
 ### Update the app config
 
@@ -62,7 +62,7 @@ Open `packages/server/medplum.config.json`
 
 Replace all instances of `http://13.40.11.171:8103/` with `https://host.docker.internal:8104/`
 
-Replace all instances of `http://13.40.11.171:3000/` with `https://localhost:8106/`
+Replace all instances of `http://13.40.11.171:3000/` with `https://13.40.11.171:8106/`
 
 The result should look something like this:
 
@@ -76,18 +76,18 @@ The result should look something like this:
   "authorizeUrl": "https://host.docker.internal:8104/oauth2/authorize",
   "tokenUrl": "https://host.docker.internal:8104/oauth2/token",
   "userInfoUrl": "https://host.docker.internal:8104/oauth2/userinfo",
-  "appBaseUrl": "https://localhost:8106",
+  "appBaseUrl": "https://13.40.11.171:8106",
   "binaryStorage": "file:./binary/",
   "storageBaseUrl": "https://host.docker.internal:8104/storage/",
   "database": {
-    "host": "localhost",
+    "host": "13.40.11.171",
     "port": 5432,
     "dbname": "medplum",
     "username": "medplum",
     "password": "medplum"
   },
   "redis": {
-    "host": "localhost",
+    "host": "13.40.11.171",
     "port": 6379,
     "password": "medplum"
   }
@@ -101,12 +101,12 @@ First, download and install Caddy: https://caddyserver.com/download
 Next, create a `Caddyfile` with the following contents:
 
 ```
-localhost:8104 {
+13.40.11.171:8104 {
   reverse_proxy 127.0.0.1:8103
   tls internal
 }
 
-localhost:8106 {
+13.40.11.171:8106 {
   reverse_proxy 127.0.0.1:8105
   tls internal
 }
@@ -116,7 +116,7 @@ Now you can run Caddy with `caddy run`
 
 Test the Medplum API server URL: <https://host.docker.internal:8104/>
 
-Test the Medplum app URL: <https://localhost:8106/>
+Test the Medplum app URL: <https://13.40.11.171:8106/>
 
 ### Setup the OpenID project
 
@@ -124,7 +124,7 @@ Register a new Medplum project called "OpenID Certification"
 
 Create two new clients called "OpenID Client 1" and "OpenID Client 2"
 
-Update both clients "Redirect URI" to "https://localhost.emobix.co.uk:8443/test/a/medplum/callback"
+Update both clients "Redirect URI" to "https://13.40.11.171.emobix.co.uk:8443/test/a/medplum/callback"
 
 Make note of the client IDs and client secrets
 
@@ -139,9 +139,9 @@ mvn clean package
 docker-compose up
 ```
 
-Open browser to <https://localhost.emobix.co.uk:8443/>
+Open browser to <https://13.40.11.171.emobix.co.uk:8443/>
 
-Test the Docker localhost URL: <http://host.docker.internal:8103/>
+Test the Docker 13.40.11.171 URL: <http://host.docker.internal:8103/>
 
 Be sure to logout between each test by visiting <http://host.docker.internal:8103/oauth2/logout>
 
@@ -149,7 +149,7 @@ Be sure to logout between each test by visiting <http://host.docker.internal:810
 
 Create two clients
 
-Set the "Redirect URI" to "https://localhost.emobix.co.uk:8443/test/a/medplum/callback"
+Set the "Redirect URI" to "https://13.40.11.171.emobix.co.uk:8443/test/a/medplum/callback"
 
 - Test Plan: OpenID Connect Core: Basic Certification Profile Authorization server test
 - Server metadata location: discovery
@@ -185,9 +185,9 @@ cd inferno
 docker-compose up
 ```
 
-Open browser to <http://localhost:4567/>
+Open browser to <http://13.40.11.171:4567/>
 
-Test the Docker localhost URL: <http://host.docker.internal:8103/>
+Test the Docker 13.40.11.171 URL: <http://host.docker.internal:8103/>
 
 Be sure to logout between each test by visiting <http://host.docker.internal:8103/oauth2/logout>
 
@@ -199,16 +199,16 @@ Make sure "Scopes" includes "fhirUser launch launch/patient offline*access openi
 
 Launch URL's:
 
-- Redirect URI: http://localhost:4567/inferno/oauth2/static/redirect
-- Launch URI: http://localhost:4567/inferno/oauth2/static/launch
-- Launch URI: http://localhost:4567/inferno/oauth2/static/launch
+- Redirect URI: http://13.40.11.171:4567/inferno/oauth2/static/redirect
+- Launch URI: http://13.40.11.171:4567/inferno/oauth2/static/launch
+- Launch URI: http://13.40.11.171:4567/inferno/oauth2/static/launch
 
 Launch parameters:
 
 - "iss" - Issuer, must be full FHIR base URL
 - "state" - Must be unique random state
 
-http://localhost:4567/inferno/oauth2/static/launch?iss=http%3A%2F%2Fhost.docker.internal%3A8103%2Ffhir%2FR4&launch=xyz1234
+http://13.40.11.171:4567/inferno/oauth2/static/launch?iss=http%3A%2F%2Fhost.docker.internal%3A8103%2Ffhir%2FR4&launch=xyz1234
 
 Launch URI: https://inferno.healthit.gov/suites/custom/smart/launch
 Redirect URI: https://inferno.healthit.gov/suites/custom/smart/redirect

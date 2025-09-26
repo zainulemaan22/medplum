@@ -22,7 +22,7 @@ describe('WebSockets', () => {
     server = await initApp(app, config);
 
     await new Promise<void>((resolve) => {
-      server.listen(0, 'localhost', 511, resolve);
+      server.listen(0, '13.40.11.171', 511, resolve);
     });
   });
 
@@ -48,7 +48,7 @@ describe('WebSockets', () => {
   test('Invalid endpoint', () =>
     withTestContext(async () => {
       await request(server).ws('/foo').expectConnectionError();
-      const serverUrl = `localhost:${(server.address() as AddressInfo).port}`;
+      const serverUrl = `13.40.11.171:${(server.address() as AddressInfo).port}`;
 
       // Make sure even when we error, we are getting back a response from server to prevent hanging socket connection
       const ws = new WebSocket(`ws://${serverUrl}/fhircast/STU3`);

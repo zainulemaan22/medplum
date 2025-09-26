@@ -43,7 +43,7 @@ describe('Hl7Client', () => {
       nextResponseCb = undefined;
 
       hl7Client = new Hl7Client({
-        host: 'localhost',
+        host: '13.40.11.171',
         port,
       });
       await hl7Client.connect();
@@ -337,7 +337,7 @@ describe('Hl7Client', () => {
 
     // Create client with a short timeout (500ms)
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: unreachablePort,
       connectTimeout: 500,
     });
@@ -387,7 +387,7 @@ describe('Hl7Client', () => {
 
     // Create client with a long timeout
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port,
       connectTimeout: 1000, // Long enough that we can cancel before it times out
     });
@@ -442,7 +442,7 @@ describe('Hl7Client', () => {
 
     // Create client with a moderate timeout
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port,
       connectTimeout: 1000,
     });
@@ -487,7 +487,7 @@ describe('Hl7Client', () => {
 
     // Create a client with a very short timeout
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port,
       connectTimeout: 100,
     });
@@ -541,7 +541,7 @@ describe('Hl7Client', () => {
 
     // Create client
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port,
     });
 
@@ -587,7 +587,7 @@ describe('Hl7Client', () => {
 
     // Create client with keepAlive = true
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port,
       keepAlive: true,
     });
@@ -651,7 +651,7 @@ describe('Hl7Client', () => {
 
       // Create client with keepAlive = true
       const client = new Hl7Client({
-        host: 'localhost',
+        host: '13.40.11.171',
         port: 9001, // Port doesn't matter since we are mocking socket
         keepAlive: true,
       });

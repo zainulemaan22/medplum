@@ -12,7 +12,7 @@ const navigateMock = jest.fn();
 const closeMock = jest.fn();
 
 async function setup(initial = '/'): Promise<void> {
-  const initialUrl = new URL(initial, 'http://localhost');
+  const initialUrl = new URL(initial, 'http://13.40.11.171');
   medplum.getUserConfiguration = jest.fn(() => {
     return {
       resourceType: 'UserConfiguration',

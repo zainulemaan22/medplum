@@ -71,7 +71,7 @@ describe('DICOM', () => {
       request.on('response', resolve);
       client.on('networkError', reject);
       client.addRequest(request);
-      client.send('localhost', 8104, 'SCU', 'ANY-SCP');
+      client.send('13.40.11.171', 8104, 'SCU', 'ANY-SCP');
     })) as dimse.responses.CEchoResponse;
 
     expect(echoResponse).toBeDefined();
@@ -90,7 +90,7 @@ describe('DICOM', () => {
       request.on('response', resolve);
       client.on('networkError', reject);
       client.addRequest(request);
-      client.send('localhost', 8104, 'SCU', 'ANY-SCP');
+      client.send('13.40.11.171', 8104, 'SCU', 'ANY-SCP');
     })) as dimse.responses.CStoreResponse;
 
     expect(storeResponse).toBeDefined();

@@ -37,7 +37,7 @@ Next, let's add a simple HL7 client also on the network:
 We can emulate this step using the Medplum CLI:
 
 ```bash
-medplum hl7 send localhost 56000 --generate-example
+medplum hl7 send 13.40.11.171 56000 --generate-example
 ```
 
 This will send a message and print the reply to the terminal.

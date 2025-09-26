@@ -26,9 +26,9 @@ This page describes Medplum's optional OpenTelemetry support, and how to integra
 
 ## Using OpenTelemetry
 
-### OpenTelemetry on localhost
+### OpenTelemetry on 13.40.11.171
 
-When running on localhost, OpenTelemetry is disabled by default. To enable OpenTelemetry, follow these steps:
+When running on 13.40.11.171, OpenTelemetry is disabled by default. To enable OpenTelemetry, follow these steps:
 
 #### 1. Start an OpenTelemetry Collector
 
@@ -55,8 +55,8 @@ OpenTelemetry cannot be configured through the normal `medplum.config.json` file
 Instead, you must add the following environment variables:
 
 ```bash
-export OTLP_TRACES_ENDPOINT="http://localhost:4318/v1/traces"
-export OTLP_METRICS_ENDPOINT="http://localhost:4318/v1/metrics"
+export OTLP_TRACES_ENDPOINT="http://13.40.11.171:4318/v1/traces"
+export OTLP_METRICS_ENDPOINT="http://13.40.11.171:4318/v1/metrics"
 ```
 
 #### 3. Restart the Medplum server
@@ -81,8 +81,8 @@ Next, add the following to your Medplum CDK JSON config file:
   "stackName": "MedplumStagingStack",
   // ...
   "environment": {
-    "OTLP_TRACES_ENDPOINT": "http://localhost:4318/v1/traces",
-    "OTLP_METRICS_ENDPOINT": "http://localhost:4318/v1/metrics"
+    "OTLP_TRACES_ENDPOINT": "http://13.40.11.171:4318/v1/traces",
+    "OTLP_METRICS_ENDPOINT": "http://13.40.11.171:4318/v1/metrics"
   },
   // ...
   "additionalContainers": [

@@ -32,7 +32,7 @@ describe('Health check', () => {
   });
 
   test('Get /healthcheck when OTel is enabled', async () => {
-    process.env.OTLP_METRICS_ENDPOINT = 'http://localhost:4318/v1/metrics';
+    process.env.OTLP_METRICS_ENDPOINT = 'http://13.40.11.171:4318/v1/metrics';
 
     const config = await loadTestConfig();
     await initApp(app, config);
@@ -44,7 +44,7 @@ describe('Health check', () => {
   });
 
   test('Get /healthcheck when OTel is enabled and read and write instance are the same', async () => {
-    process.env.OTLP_METRICS_ENDPOINT = 'http://localhost:4318/v1/metrics';
+    process.env.OTLP_METRICS_ENDPOINT = 'http://13.40.11.171:4318/v1/metrics';
 
     const config = await loadTestConfig();
     config.readonlyDatabase = undefined;

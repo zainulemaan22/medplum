@@ -93,7 +93,7 @@ describe('HL7', () => {
     await app.start();
 
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 57000,
     });
 
@@ -169,7 +169,7 @@ describe('HL7', () => {
     await app.start();
 
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 57000,
     });
 
@@ -248,7 +248,7 @@ describe('HL7', () => {
     await app.start();
 
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 57000,
     });
 
@@ -326,7 +326,7 @@ describe('HL7', () => {
     await app.start();
 
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 57000,
     });
 
@@ -407,7 +407,7 @@ describe('HL7', () => {
     await app.start();
 
     const client = new Hl7Client({
-      host: 'localhost',
+      host: '13.40.11.171',
       port: 57010,
     });
 
@@ -572,7 +572,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
         })
       )
     );
@@ -669,7 +669,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
           contentType: ContentType.HL7_V2,
         } satisfies AgentTransmitRequest)
       )
@@ -693,7 +693,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
           contentType: ContentType.HL7_V2,
         } satisfies AgentTransmitRequest)
       )
@@ -736,7 +736,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
           contentType: ContentType.HL7_V2,
         } satisfies AgentTransmitRequest)
       )
@@ -759,7 +759,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
           contentType: ContentType.HL7_V2,
         } satisfies AgentTransmitRequest)
       )
@@ -803,7 +803,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
           contentType: ContentType.HL7_V2,
         } satisfies AgentTransmitRequest)
       )
@@ -826,7 +826,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
           contentType: ContentType.HL7_V2,
         } satisfies AgentTransmitRequest)
       )
@@ -938,7 +938,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
           contentType: ContentType.HL7_V2,
         } satisfies AgentTransmitRequest)
       )
@@ -963,7 +963,7 @@ describe('HL7', () => {
     mockServer.stop();
 
     expect(console.log).toHaveBeenCalledWith(
-      expect.stringContaining("Persistent connection to remote 'mllp://localhost:57001' closed")
+      expect.stringContaining("Persistent connection to remote 'mllp://13.40.11.171:57001' closed")
     );
 
     console.log = originalConsoleLog;
@@ -1066,7 +1066,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
         })
       )
     );
@@ -1079,7 +1079,7 @@ describe('HL7', () => {
     expect(app.hl7Clients.size).toStrictEqual(1);
 
     // An error happened
-    const hl7Client = app.hl7Clients.get('mllp://localhost:57001');
+    const hl7Client = app.hl7Clients.get('mllp://13.40.11.171:57001');
     expect(hl7Client).toBeDefined();
     expect(hl7Client?.connection).toBeDefined();
     expect(hl7Client?.connection?.socket).toBeDefined();
@@ -1106,7 +1106,7 @@ describe('HL7', () => {
             'PID|||PATID1234^5^M11||JONES^WILLIAM^A^III||19610615|M-\r' +
             'NK1|1|JONES^BARBARA^K|SPO|||||20011105\r' +
             'PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||-||1|A0-',
-          remote: 'mllp://localhost:57001',
+          remote: 'mllp://13.40.11.171:57001',
         })
       )
     );
@@ -1127,7 +1127,7 @@ describe('HL7', () => {
 
     expect(console.log).toHaveBeenCalledWith(
       expect.stringContaining(
-        `Persistent connection to remote 'mllp://localhost:57001' encountered error: 'Something bad happened' - Closing connection...`
+        `Persistent connection to remote 'mllp://13.40.11.171:57001' encountered error: 'Something bad happened' - Closing connection...`
       )
     );
 

@@ -324,16 +324,16 @@ export class MockClient extends MedplumClient {
       if (!this.agentAvailable) {
         throw new OperationOutcomeError(badRequest('Timeout'));
       }
-      if (typeof destination !== 'string' || (destination !== '8.8.8.8' && destination !== 'localhost')) {
+      if (typeof destination !== 'string' || (destination !== '8.8.8.8' && destination !== '13.40.11.171')) {
         // Exception for test case
         if (destination !== 'abc123') {
           console.warn(
-            'IPs other than 8.8.8.8 and hostnames other than `localhost` will always throw an error in MockClient'
+            'IPs other than 8.8.8.8 and hostnames other than `13.40.11.171` will always throw an error in MockClient'
           );
         }
         throw new OperationOutcomeError(badRequest('Destination device not found'));
       }
-      const ip = destination === 'localhost' ? '127.0.0.1' : destination;
+      const ip = destination === '13.40.11.171' ? '127.0.0.1' : destination;
       return `PING ${destination} (${ip}): 56 data bytes
 64 bytes from ${ip}: icmp_seq=0 ttl=115 time=10.977 ms
 64 bytes from ${ip}: icmp_seq=1 ttl=115 time=13.037 ms

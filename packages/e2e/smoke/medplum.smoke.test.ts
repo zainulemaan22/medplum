@@ -9,7 +9,7 @@ test.describe('Medplum App Smoke Tests', () => {
   // TODO: Work around recaptcha
   test.skip('Register new user', async ({ page }) => {
     // We should automatically be redirected to the signin form
-    await expect(page).toHaveURL(/^http:\/\/localhost:3000\/signin/);
+    await expect(page).toHaveURL(/^http:\/\/13.40.11.171:3000\/signin/);
 
     // Make sure the sign in form is there
     await expect(page.locator('form')).toContainText('Email *');
@@ -48,7 +48,7 @@ test.describe('Medplum App Smoke Tests', () => {
     await page.getByPlaceholder('Family').fill('Baggins');
     await page.getByRole('button', { name: 'Add', exact: true }).click();
     await page.getByRole('button', { name: 'Create' }).click();
-    await expect(page).toHaveURL(/^http:\/\/localhost:3000\/Patient\/[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$/);
+    await expect(page).toHaveURL(/^http:\/\/13.40.11.171:3000\/Patient\/[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$/);
     await expect(page.getByTestId('timeline-item').getByText('Frodo Baggins')).toBeVisible();
   });
 
@@ -95,7 +95,7 @@ test.describe('Medplum App Smoke Tests', () => {
 
 async function signIn(page: Page, email: string, password: string): Promise<void> {
   // We should automatically be redirected to the signin form
-  await expect(page).toHaveURL(/^http:\/\/localhost:3000\/signin/);
+  await expect(page).toHaveURL(/^http:\/\/13.40.11.171:3000\/signin/);
 
   // Make sure the sign in form is there
   await expect(page.locator('form')).toContainText('Email *');
@@ -110,6 +110,6 @@ async function signIn(page: Page, email: string, password: string): Promise<void
   await page.getByRole('button', { name: 'Sign in' }).click();
 
   // Make sure we ended up on the right page
-  await expect(page).toHaveURL(/^http:\/\/localhost:3000\/Patient\?/);
+  await expect(page).toHaveURL(/^http:\/\/13.40.11.171:3000\/Patient\?/);
   await expect(page.locator('div').filter({ hasText: /^Medplum Logo$/ })).toBeVisible();
 }

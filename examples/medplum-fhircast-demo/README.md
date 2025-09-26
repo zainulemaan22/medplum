@@ -11,4 +11,4 @@
 
 1. Run the Medplum server
 2. Run `npm run dev` in this directory
-3. Open two windows at `localhost:5173/publisher` and `localhost:5173/subscriber`
+3. Open two windows at `13.40.11.171:5173/publisher` and `13.40.11.171:5173/subscriber`
