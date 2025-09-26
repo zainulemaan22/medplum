@@ -117,8 +117,10 @@ services:
         condition: service_healthy
     ports:
       - "3000:3000"
+    environment:
+      - MEDPLUM_API_URL=http://13.40.11.171:8103/
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://13.40.11.171:3000"]
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
       interval: 10s
       timeout: 5s
       retries: 5
